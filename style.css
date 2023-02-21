@@ -1,0 +1,13 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.lugar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid blue;
+    align-items: center;
+}
