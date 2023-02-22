@@ -61,3 +61,10 @@ text{
     
 }
 
+.formp{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20vh;
+}
