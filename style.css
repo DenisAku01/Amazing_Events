@@ -35,13 +35,13 @@ body{
     display: flex;
     justify-content: space-around;
     margin: 5px;
-    
+    padding: 4rem 0px;
 
 }
 
 .cardp{
     width: 18rem;
-    margin: 3rem;
+    margin: 1rem 0.5px;
 
 }
 .svgp{
@@ -60,3 +60,4 @@ text{
     color:#dee2e6";
     
 }
+
