@@ -71,3 +71,12 @@ text{
     justify-content: center;
     margin: 20vh;
 }
+.tablep{
+    border: 3px solid black;
+
+}
+.tableCentral{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
