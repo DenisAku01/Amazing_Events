@@ -11,6 +11,9 @@ main{
     width: 100%;
     margin: 12.3rem 0;
 }
+h1{
+    text-align: center;
+}
 .lugar{
     display: flex;
     justify-content: space-between;
@@ -36,13 +39,13 @@ body{
     
 }
 .cardSection{
-    background-color: aliceblue;
+    background-color: #DDFFF7;
     display: flex;
     justify-content: space-around;
     margin: 5px;
     padding: 4rem 0px;
-    
-
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
+    border-radius: 2px;
 }
 
 .cardp{
@@ -50,7 +53,19 @@ body{
     margin: 1rem 0.5px;
     box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     cursor: pointer;
-
+    transform: translateX(0px);
+    transition: transform 200ms;
+}
+.cardp:hover{
+    transform: translateY(-20px);
+    transition: transform 200ms;
+}
+.cardp > .card-img-top {
+    transition: transform 200ms ease-in-out;
+}
+.cardp:hover > .card-img-top {
+    transform: scale(1.085)
+    
 }
 
 
@@ -76,7 +91,7 @@ text{
     display: flex;
     align-items: center;
     margin: 15.5rem 1rem;
-    width: 90%;
+    width: 98%;
     justify-content: center;
 }
 .flechaI{
@@ -143,18 +158,26 @@ text{
 }
 
 ::-webkit-scrollbar{
-    width: 1rem;
+    width: 0.5rem;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-right: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #EFC3F5;
+    border-radius: 2rem;
+
 }
 footer>div>img{
     width: 3rem;
     
 }
 footer{
-    background-color: #edb8fa;
+    background-color: #FAA6FF;
     display: flex !important;
     margin-top: auto;
     justify-content: space-around;
-    
+    align-items: center
 }
 form,table{
     padding: auto;
