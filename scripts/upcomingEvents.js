@@ -10,7 +10,7 @@ for(dataEvent of data.events){
                         <div class="card-body">
                             <h5 class="card-title">${dataEvent.name}</h5>
                             <p class="card-text">${dataEvent.description}</p>
-                            <a href="./detail.html" class="btn btn-primary">More Details</a>
+                            <a href="./detail.html" class="btn btn-danger">More Details</a>
                             <p class="card-text">Price:${dataEvent.price}</p>
                         </div>
                  </div>`
