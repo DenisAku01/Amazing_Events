@@ -42,11 +42,11 @@ function printCard(array){
 // crea las checkbox necesarias por categoria
 function crearCheckBoxes(array){
   let arrayCategories = array.map(data => data.category)
-  console.log(arrayCategories)
+  /* console.log(arrayCategories) */
   let setCategories = new Set(arrayCategories)
-  console.log(setCategories)
+  /* console.log(setCategories) */
   let arrayChecks = Array.from(setCategories)
-  console.log(arrayChecks)
+  /* console.log(arrayChecks) */
   let checkboxes = ''
   arrayChecks.forEach(category => {
       checkboxes += `
@@ -60,7 +60,7 @@ function crearCheckBoxes(array){
 function filtradoPrincipal(){
   
   let primerFiltro = filtrarPorTexto(data.events, INPUT.value)
-  console.log(primerFiltro)
+  /* console.log(primerFiltro) */
   let segundoFiltro = filtrarPorCategoria(primerFiltro)
   printCard(segundoFiltro)
 }
@@ -69,7 +69,7 @@ function filtradoPrincipal(){
 //Filtro el Buscador
 function filtrarPorTexto(array,texto){
   let arrayFiltrado = array.filter(elemento => elemento.name.toLowerCase().includes(texto.toLowerCase()))
-  console.log(arrayFiltrado)
+  /* console.log(arrayFiltrado) */
   return arrayFiltrado
 }
  
@@ -84,8 +84,8 @@ function filtrarPorCategoria(array){
   let arrayChecksCheckedValues = arrayChecksChecked.map(checkChecked => checkChecked.value)
   // console.log(arrayChecksCheckedValues);
   let arrayFiltrado = array.filter(elemento => arrayChecksCheckedValues.includes(elemento.category))
-  console.log(arrayFiltrado)
-  console.log(array)
+  /* console.log(arrayFiltrado)
+  console.log(array) */
   if(arrayChecksChecked.length > 0){
       return arrayFiltrado
   }else{
