@@ -1,6 +1,13 @@
 
 // muestra todas las card en general
 const divElement = document.getElementById("cardSection");
+  
+
+printCard()
+
+
+
+function printCard(){
   let card = '';
 
   for (let event of data.events) {
@@ -16,6 +23,7 @@ const divElement = document.getElementById("cardSection");
                  </div>`
   }
   divElement.innerHTML = card;
+}
    
 
   
