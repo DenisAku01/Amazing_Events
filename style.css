@@ -143,6 +143,7 @@ text{
     box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
 
 }
+
 .card-complete{
     border: 1px solid orange;
     width: 50%;
@@ -181,9 +182,12 @@ text{
     border-radius: 2rem;
 
 }
-footer>div>img{
+footer>div>a>img{
     width: 3rem;
     
+}
+.imgDeFooter{
+    width: 3rem;
 }
 footer{
     background-color: #FAA6FF;
