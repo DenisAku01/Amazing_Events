@@ -18,12 +18,10 @@ function printCardPast(){
                                 <a href="./detail.html" class="btn btn-danger">More Details</a>
                                 <p class="card-text">Price:${dataEvent.price}</p>
                             </div>
-                     </div>`
+                    </div>`
             }
         };
     
-      
-      
     divEvents.innerHTML = cards;
 
 }

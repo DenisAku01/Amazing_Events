@@ -29,7 +29,7 @@ function printCard(array){
                               <a href="./detail.html" class="btn btn-danger">More Details</a>
                               <p class="card-text">Price:${event.price}</p>
                           </div>
-                   </div>`
+                  </div>`
     }
     divElement.innerHTML = card;
   }else{
@@ -72,7 +72,7 @@ function filtrarPorTexto(array,texto){
   /* console.log(arrayFiltrado) */
   return arrayFiltrado
 }
- 
+
 
 //filtrado por categoria
 function filtrarPorCategoria(array){
@@ -94,4 +94,3 @@ function filtrarPorCategoria(array){
   
 }
 
-  
