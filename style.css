@@ -9,7 +9,7 @@ html{
 main{
     margin-top: 5%;
     width: 100%;
-    margin: 12.3rem 0;
+    margin: 2rem 0;
 }
 h1{
     text-align: center;
@@ -235,5 +235,6 @@ form,table{
         grid-template-columns: 1fr 1fr 1fr !important;
 
     }
+    
     
 }
