@@ -1,4 +1,4 @@
-// muestra todas las card en general
+
 const divElement = document.getElementById("cardSection")
 const CONTENEDORCHECK = document.getElementById("checkSection")
 const INPUT = document.getElementById("search")
