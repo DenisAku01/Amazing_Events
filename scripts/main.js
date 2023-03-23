@@ -26,7 +26,7 @@ function printCard(array){
                           <div class="card-body">
                               <h5 class="card-title">${event.name}</h5>
                               <p class="card-text">${event.description}</p>
-                              <a href="./detail.html" class="btn btn-danger">More Details</a>
+                              <a href="./detail.html?id=${event._id}" class="btn btn-danger">More Details</a>
                               <p class="card-text">Price:${event.price}</p>
                           </div>
                   </div>`
@@ -93,4 +93,6 @@ function filtrarPorCategoria(array){
   }
   
 }
+
+
 

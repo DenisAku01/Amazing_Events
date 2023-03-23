@@ -1,5 +1,5 @@
-
-/* const currentDate = Date.parse(data.currentDate);
+const currentDate = Date.parse(data.currentDate)
+/* 
 const divEvents = document.getElementById("pastSection")
 printCardPast(data.events)
 //Escribe los Eventos Pasados
@@ -50,14 +50,14 @@ CONTENEDORCHECK.addEventListener('change',filtradoPrincipal)
 function printCard(array){
     let card = '';
 
-    if(array.length > 0 ){
+    if(array.length > 0){
     for (let event of array) {
         card += `<div class="card cardp col-sm-6"  >
                             <img src="${event.image}" class="bd-placeholder-img card-img-top svgp" alt="imagen del evento">
                             <div class="card-body">
                                 <h5 class="card-title">${event.name}</h5>
                                 <p class="card-text">${event.description}</p>
-                                <a href="./detail.html" class="btn btn-danger">More Details</a>
+                                <a href="./detail.html?id=${event.id}" class="btn btn-danger">More Details</a>
                                 <p class="card-text">Price:${event.price}</p>
                             </div>
                     </div>`
