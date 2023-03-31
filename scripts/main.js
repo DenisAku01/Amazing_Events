@@ -3,14 +3,35 @@ const divElement = document.getElementById("cardSection")
 const CONTENEDORCHECK = document.getElementById("checkSection")
 const INPUT = document.getElementById("search")
 
-// Llamadas de Funciones
-// Imprimir Cards
-printCard(data.events)
-//crea las Checkbox
-crearCheckBoxes(data.events)
-// Escuchar y Filtrar cruzado
-INPUT.addEventListener('input',filtradoPrincipal)
-CONTENEDORCHECK.addEventListener('change',filtradoPrincipal)
+const data = fetch('amazing.json')
+.then(res => res.json())
+.then(data => {
+  console.log(data)
+  printCard(data.events)
+  crearCheckBoxes(data.events)
+  INPUT.addEventListener('input',filtradoPrincipal)
+  CONTENEDORCHECK.addEventListener('change',filtradoPrincipal)
+
+
+  function filtradoPrincipal(){
+  
+    let primerFiltro = filtrarPorTexto(data.events, INPUT.value)
+    /* console.log(primerFiltro) */
+    let segundoFiltro = filtrarPorCategoria(primerFiltro)
+    printCard(segundoFiltro)
+  }
+  function filtrarPorTexto(array,texto){
+    console.log(array)
+    let arrayFiltrado = array.filter(elemento => elemento.name.toLowerCase().includes(texto.toLowerCase()))
+    console.log(arrayFiltrado) 
+    return arrayFiltrado
+  }
+
+  return data
+})
+
+
+
 
 
 
@@ -39,6 +60,8 @@ function printCard(array){
 
 
 }
+
+
 // crea las checkbox necesarias por categoria
 function crearCheckBoxes(array){
   let arrayCategories = array.map(data => data.category)
@@ -56,22 +79,12 @@ function crearCheckBoxes(array){
   CONTENEDORCHECK.innerHTML = checkboxes
 }
 
-//Filtra todo incluyendo la categorias y el buscador y muestra por pantalla lo filtrado
-function filtradoPrincipal(){
-  
-  let primerFiltro = filtrarPorTexto(data.events, INPUT.value)
-  /* console.log(primerFiltro) */
-  let segundoFiltro = filtrarPorCategoria(primerFiltro)
-  printCard(segundoFiltro)
-}
 
 
-//Filtro el Buscador
-function filtrarPorTexto(array,texto){
-  let arrayFiltrado = array.filter(elemento => elemento.name.toLowerCase().includes(texto.toLowerCase()))
-  /* console.log(arrayFiltrado) */
-  return arrayFiltrado
-}
+
+
+
+
 
 
 //filtrado por categoria

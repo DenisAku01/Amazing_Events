@@ -23,9 +23,9 @@ h1{
 }
 
 body{
-    background-color: #f5b0cb;
-    background-image: linear-gradient(300deg, #f5b0cb 19%, #dc6acf 51%, #39375b 85%);
-    background-repeat: no-repeat;
+    background: rgb(52,125,152);
+    background: linear-gradient(90deg, rgba(52,125,152,1) 0%, rgba(13,162,217,1) 35%, rgba(13,77,217,1) 100%);
+    min-height: 100vh;
 }
 
 .logo{
@@ -42,7 +42,7 @@ body{
     
 }
 .cardSection{
-    background-color: #f0d54e;
+    background-color: #d9990d;
     background-image: linear-gradient(103deg, #f0d54e 19%, #f7be36 51%, #f7b12b 85%);
 
     background-repeat: no-repeat;
@@ -93,12 +93,13 @@ text{
 }
 .tablep{
     border: 3px solid black;
+    margin: auto;
 
 }
 .tableCentral{
     display: flex;
     align-items: center;
-    margin: 15.5rem 1rem;
+    margin: auto;
     width: 98%;
     justify-content: center;
 }
@@ -129,12 +130,12 @@ text{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid black;
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     align-items: center;
     padding: 4rem 0px;
     border-radius: 4rem ;
     margin: 4px;
-    background-color: aliceblue;
+    background-color: #d9440d;
 }
 .img{
     border-radius: 4rem;
@@ -145,14 +146,14 @@ text{
 }
 
 .card-complete{
-    border: 1px solid orange;
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 1rem;
     border-radius: 3rem;
-    background-color: rgba(87, 181, 216, 0.254) ;
+    background-color: #d9990d ;
 }
 .card-top{
     display: flex;
@@ -162,6 +163,7 @@ text{
 .card-mid{
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
 }
 .card-footer{
     margin-top: 2rem;
@@ -190,11 +192,12 @@ footer>div>a>img{
     width: 3rem;
 }
 footer{
-    background-color: #FAA6FF;
+    background-color: #d9440d;
     display: flex !important;
     margin-top: auto;
     justify-content: space-around;
     align-items: center
+    
 }
 form,table{
     padding: auto;
@@ -240,6 +243,13 @@ form,table{
 }
 
 #footerContact{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#footertable{
     position: fixed;
     left: 0;
     bottom: 0;
