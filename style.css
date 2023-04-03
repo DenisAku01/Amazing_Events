@@ -3,8 +3,17 @@
     margin: 0px;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 main{
     margin-top: 5%;
+    width: 100%;
+    margin: 2rem 0;
+}
+h1{
+    text-align: center;
+    color: floralwhite;
 }
 .lugar{
     display: flex;
@@ -14,8 +23,12 @@ main{
 }
 
 body{
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background: rgb(52,125,152);
+    background: linear-gradient(90deg, rgba(52,125,152,1) 0%, rgba(13,162,217,1) 35%, rgba(13,77,217,1) 100%);
+    min-height: 100vh;
 }
+
+
 
 .logo{
     width: 70px;
@@ -31,13 +44,16 @@ body{
     
 }
 .cardSection{
-    background-color: aliceblue;
+    background-color: #d9990d;
+    background-image: linear-gradient(103deg, #f0d54e 19%, #f7be36 51%, #f7b12b 85%);
+
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-around;
     margin: 5px;
     padding: 4rem 0px;
-    
-
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
+    border-radius: 2px;
 }
 
 .cardp{
@@ -45,9 +61,23 @@ body{
     margin: 1rem 0.5px;
     box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     cursor: pointer;
-
+    transform: translateX(0px);
+    transition: transform 200ms;
 }
-
+.cardp:hover{
+    transform: translateY(-20px);
+    transition: transform 200ms;
+}
+.cardp > .card-img-top {
+    transition: transform 200ms ease-in-out;
+}
+.cardp:hover > .card-img-top {
+    transform: scale(1.085)
+    
+}
+label{
+    color: ghostwhite;
+}
 
 text{
     width:50%;
@@ -65,12 +95,15 @@ text{
 }
 .tablep{
     border: 3px solid black;
+    margin: auto;
 
 }
 .tableCentral{
     display: flex;
     align-items: center;
-    margin: 2rem;
+    margin: auto;
+    width: 98%;
+    justify-content: center;
 }
 .flechaI{
     transform: translateX(0px);
@@ -85,6 +118,11 @@ text{
     transition: transform 500ms;
 
 }
+.flechaD2:hover{
+    transform: translateX(0px);
+    transition: transform 500ms;
+
+}
 .flechaD:hover{
     transform: translateX(10px);
     transition: transform 500ms;
@@ -94,12 +132,12 @@ text{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid black;
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     align-items: center;
     padding: 4rem 0px;
     border-radius: 4rem ;
     margin: 4px;
-    background-color: aliceblue;
+    background-color: #d9440d;
 }
 .img{
     border-radius: 4rem;
@@ -108,15 +146,16 @@ text{
     box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
 
 }
+
 .card-complete{
-    border: 1px solid orange;
+    box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.50);
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 1rem;
     border-radius: 3rem;
-    background-color: rgba(87, 181, 216, 0.254) ;
+    background-color: #d9990d ;
 }
 .card-top{
     display: flex;
@@ -126,6 +165,7 @@ text{
 .card-mid{
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
 }
 .card-footer{
     margin-top: 2rem;
@@ -135,10 +175,42 @@ text{
     
 }
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-right: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #EFC3F5;
+    border-radius: 2rem;
+
+}
+footer>div>a>img{
+    width: 3rem;
+    
+}
+.imgDeFooter{
+    width: 3rem;
+}
+footer{
+    background-color: #d9440d;
+    display: flex !important;
+    margin-top: auto;
+    justify-content: space-around;
+    align-items: center
+    
+}
+form,table{
+    padding: auto;
+}
 
 @media (max-width:800px){
     .btn-p{
         margin: 1rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr;
     }
     .maxDetalles{
         flex-direction: column;
@@ -161,4 +233,28 @@ text{
         height: 369px;
     }
     
+}
+@media (max-width:570px){
+    .btn-p{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr !important;
+
+    }
+    
+    
+}
+
+#footerContact{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#footertable{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
